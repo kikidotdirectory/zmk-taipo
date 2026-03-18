@@ -1,58 +1,102 @@
-#define TCOMBO_T(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS, TIMEOUT) \
+#define TCOMBO(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS) \
 combo_l_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BINDINGS>; \
 	key-positions = <LEFT_KEYPOS>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_li_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <INNER_BINDINGS>; \
 	key-positions = <LEFT_KEYPOS LIT>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_lo_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <OUTER_BINDINGS>; \
 	key-positions = <LEFT_KEYPOS LOT>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_lb_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BOTH_BINDINGS>; \
 	key-positions = <LEFT_KEYPOS LIT LOT>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_r_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_ri_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <INNER_BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS RIT>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_ro_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <OUTER_BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS ROT>; \
 	layers = <COMBO_LAYERS>; \
 }; \
 combo_rb_##NAME { \
-	timeout-ms = <TIMEOUT>; \
+	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BOTH_BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS RIT ROT>; \
 	layers = <COMBO_LAYERS>; \
 };
 
-#define TCOMBO(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS) \
-TCOMBO_T(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS, COMBO_TIMEOUT)
-
 #define TCOMBO_ADJ(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS) \
-TCOMBO_T(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS, COMBO_TIMEOUT_ADJ)
+combo_l_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <BINDINGS>; \
+	key-positions = <LEFT_KEYPOS>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_li_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <INNER_BINDINGS>; \
+	key-positions = <LEFT_KEYPOS LIT>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_lo_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <OUTER_BINDINGS>; \
+	key-positions = <LEFT_KEYPOS LOT>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_lb_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <BOTH_BINDINGS>; \
+	key-positions = <LEFT_KEYPOS LIT LOT>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_r_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <BINDINGS>; \
+	key-positions = <RIGHT_KEYPOS>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_ri_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <INNER_BINDINGS>; \
+	key-positions = <RIGHT_KEYPOS RIT>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_ro_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <OUTER_BINDINGS>; \
+	key-positions = <RIGHT_KEYPOS ROT>; \
+	layers = <COMBO_LAYERS>; \
+}; \
+combo_rb_##NAME { \
+	timeout-ms = <COMBO_TIMEOUT_ADJ>; \
+	bindings = <BOTH_BINDINGS>; \
+	key-positions = <RIGHT_KEYPOS RIT ROT>; \
+	layers = <COMBO_LAYERS>; \
+};
 
 
 combo_l_space { \
