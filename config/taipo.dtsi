@@ -163,7 +163,7 @@ TCOMBO(SQT,    &kp SQT,    &kp DQT,   &kp GRAVE,  &none,        TLR BLP,     TRR
 TCOMBO(SQT2,   &kp SQT,    &kp DQT,   &kp GRAVE,  &none,        BLR TLM TLI, BRR TRM TRI)
 TCOMBO(TAB,    &kp TAB,   &kp LS(TAB), &kp ESC,   &bt BT_CLR,   TLR TLM TLI, TRR TRM TRI)
 TCOMBO(ENTER,  &kp ENTER,  &kp ESC,   &kp LALT,   &bootloader,  BLR BLM BLI, BRR BRM BRI)
-TCOMBO(TABSWP, &swapper,   &tabswapper, &kp ESC,  &none,        TLP TLR TLM, TRP TRR TRM)
+// TCOMBO(TABSWP, &swapper,   &tabswapper, &kp ESC,  &none,        TLP TLR TLM, TRP TRR TRM)
 TCOMBO(CXV,    &kp LG(C)   &kp LG(V), &kp LG(Z),  &none,        BLP BLR BLM, BRP BRR BRM)
 TCOMBO(LGUI,   &sk LGUI,   &kp RIGHT, &kp PGUP,   &bt BT_SEL 3, TLP BLP,     TRP BRP)
 TCOMBO(LALT,   &sk LALT,   &kp UP,    &kp HOME,   &bt BT_SEL 2, TLR BLR,     TRR BRR)
